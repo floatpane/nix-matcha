@@ -3,19 +3,19 @@ let
   sources = {
     x86_64-darwin = {
       url = "https://github.com/floatpane/matcha/releases/download/nightlyv0/matcha_nightly_darwin_amd64.tar.gz";
-      hash = "sha256-P2+Co71BkQ/WgHnyAu9rZ4xK8VVktG5hxxxI9D+wOuA=";
+      hash = "sha256-BK3O2aXdMJ+qRangvfI9jbmUlwSOp/QoBo75I2tSWJg=";
     };
     aarch64-darwin = {
       url = "https://github.com/floatpane/matcha/releases/download/nightlyv0/matcha_nightly_darwin_arm64.tar.gz";
-      hash = "sha256-3VgOW1UHE/ZE206RoYGME4+0bHrCzhZ5w3L/JZSTrbI=";
+      hash = "sha256-CojuGtnSh2fu9vd00K3++Jc5EKT/Sm+bpDinsEsYVR0=";
     };
     x86_64-linux = {
       url = "https://github.com/floatpane/matcha/releases/download/nightlyv0/matcha_nightly_linux_amd64.tar.gz";
-      hash = "sha256-hr/w9Lil5bQmgjKf3tLgJcuwdm4gwFFWVGeoMKKnRuQ=";
+      hash = "sha256-ieuizbuR5nPDmYkjI00VNIroXa31k0haDzKu86lNCwE=";
     };
     aarch64-linux = {
       url = "https://github.com/floatpane/matcha/releases/download/nightlyv0/matcha_nightly_linux_arm64.tar.gz";
-      hash = "sha256-GxDOkdvQY8D4QmoRdnl9lBSMEK+ToYoF3n7Er2I+8tM=";
+      hash = "sha256-8ozkqHsrK1ZSdaliqRkSiYTH4SE8/poPmCk7pM4vwtw=";
     };
   };
   src = sources.${stdenvNoCC.hostPlatform.system}
@@ -23,7 +23,7 @@ let
 in
 stdenvNoCC.mkDerivation {
   pname = "matcha-nightly";
-  version = "nightly-006bef0";
+  version = "nightly-13461eb";
   src = fetchurl src;
   sourceRoot = ".";
   installPhase = ''
