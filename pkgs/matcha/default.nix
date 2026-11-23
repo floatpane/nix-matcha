@@ -9,22 +9,22 @@
 let
   inherit (stdenvNoCC.hostPlatform) system;
   shaMap = {
-    x86_64-linux = "13gag5yv0xjnyl33nfv83nd6m7lxfj7yqvrldx28bysr5s88zy8v";
-    aarch64-linux = "0vsczhqhv62pcjpngcl68mhixsapvnkchc5q0zy07xxr72ldqs26";
-    x86_64-darwin = "1qv56p764bh2gzpcpy9l7qb22p3kzbbn2znavrijybqv5nk3bq9j";
-    aarch64-darwin = "1g0vfw4birqg1rjn5hppqppdpy94d48m5a97bnv51v51j17jkg1k";
+    x86_64-linux = "02gv7jc7rzdd5b7hhcmz11wrgsg66pc5gfp0h7mgqvf1w5ydal86";
+    aarch64-linux = "1cbjrvcf0cw9jjgj7f54pcwss22yrm2qzkfd9mhmkmciigdss8w6";
+    x86_64-darwin = "0q2yfcs17c3bcackgrvnpw1jhfih1mjgr7lx4b02jkibkmazhlym";
+    aarch64-darwin = "1as80qscp5n716k1z39gc5x9kb3s6w6yy4kj3kmx5i0an8q5idvg";
   };
 
   urlMap = {
-    x86_64-linux = "https://github.com/floatpane/matcha/releases/download/v1.4.3/matcha_1.4.3_linux_amd64.tar.gz";
-    aarch64-linux = "https://github.com/floatpane/matcha/releases/download/v1.4.3/matcha_1.4.3_linux_arm64.tar.gz";
-    x86_64-darwin = "https://github.com/floatpane/matcha/releases/download/v1.4.3/matcha_1.4.3_darwin_amd64.tar.gz";
-    aarch64-darwin = "https://github.com/floatpane/matcha/releases/download/v1.4.3/matcha_1.4.3_darwin_arm64.tar.gz";
+    x86_64-linux = "https://github.com/floatpane/matcha/releases/download/v1.5.0/matcha_1.5.0_linux_amd64.tar.gz";
+    aarch64-linux = "https://github.com/floatpane/matcha/releases/download/v1.5.0/matcha_1.5.0_linux_arm64.tar.gz";
+    x86_64-darwin = "https://github.com/floatpane/matcha/releases/download/v1.5.0/matcha_1.5.0_darwin_amd64.tar.gz";
+    aarch64-darwin = "https://github.com/floatpane/matcha/releases/download/v1.5.0/matcha_1.5.0_darwin_arm64.tar.gz";
   };
 in
 stdenvNoCC.mkDerivation {
   pname = "matcha";
-  version = "1.4.3";
+  version = "1.5.0";
   src = fetchurl {
     url = urlMap.${system};
     sha256 = shaMap.${system};
